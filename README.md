@@ -6,13 +6,15 @@ The solution is provided in JavaScript with help from the HMTL5 input specificat
 
 ## Run locally
 
-Clone the github url and start the server with `node server.js`. Navigate to localhost:3000 to test the password validation tool.
+Clone the github url and install the dependencies with `npm install` (`npm i` for short), or if you use **yarn**, `yarn install`. Start the server with `node server.js`. Navigate to localhost:3000 to test the password validation tool.
 
 ### TODO:
 
 - Replace `console.log` statements by installing Karama and Headless Chrome packages for automated JS testing in the browser.
 
 - Compress password list to UTF-16 using bloom filter and LZString for caching in localStorage
+
+#### Screenshots
 
 ![success Message](https://i.imgur.com/ZDzcoMV.png)
 
