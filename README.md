@@ -1,3 +1,23 @@
+# NIST Password Validator
+
+This password validation tool verifies if a user supplied password meets the [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/) set by [NIST](https://www.nist.gov/).
+
+The solution is provided in JavaScript with help from the HMTL5 input specification. Note: the HTML attributes `minlength` and `maxlength` of the **input** element are set to 8 and 64 respectively. The attributes provide immediate user feedback and are a best practice but they are not required.
+
+## Run locally
+
+Clone the github url and start the server with `node server.js`. Navigate to localhost:3000 to test the password validation tool.
+
+### TODO:
+
+- Replace `console.log` statements by installing Karama and Headless Chrome packages for automated JS testing in the browser.
+
+- Compress password list to UTF-16 using bloom filter and LZString for caching in localStorage
+
+![success Message](https://github.com/essenceofchaos/nist-web-boilerplate/successMessage.png 'Screenshot of success message')
+
+![failure Message](https://github.com/essenceofchaos/nist-web-boilerplate/failureMessage.png 'Screenshot of failure message')
+
 # Background
 
 [NIST](https://www.nist.gov/) recently updates their [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/) in June 2017.
@@ -7,10 +27,10 @@ Those have gone out the window and the new suggestions are as follows:
 
 Passwords MUST
 
-1. Have an 8 character minimum
-2. AT LEAST 64 character maximum
-2. Allow all ASCII characters and spaces (unicode optional)
-4. Not be a common password
+1.  Have an 8 character minimum
+2.  AT LEAST 64 character maximum
+3.  Allow all ASCII characters and spaces (unicode optional)
+4.  Not be a common password
 
 # Project
 
@@ -18,11 +38,11 @@ We want a simple webpage to check if a password is NIST compliant for anyone to 
 
 ## Requirements
 
-* Validate a input password is between 8-64 characters, is only ASCII characters, and not in the common passwords collection.
-* Users should be able to check passwords multiple times and the page should remain responsive.
-* DO NOT export the user supplied password in any form.
-* DO NOT edit the server, but you can add developer tools if it's helpful. Adding hot-reloading for dev work for example.
-* DO NOT make HTTP requests for data othan than from the supplied server
+- Validate a input password is between 8-64 characters, is only ASCII characters, and not in the common passwords collection.
+- Users should be able to check passwords multiple times and the page should remain responsive.
+- DO NOT export the user supplied password in any form.
+- DO NOT edit the server, but you can add developer tools if it's helpful. Adding hot-reloading for dev work for example.
+- DO NOT make HTTP requests for data othan than from the supplied server
 
 Feel free to use any tooling/libraries you'd like, but focus on meeting the functional requirments. This project will not be evaluated on the aesthetics or UI outside of meeting the requirments.
 
@@ -32,8 +52,8 @@ Treat this project as if it was an open source utility that you were going to di
 
 ### System Requirments
 
-* node v8.10.0+
-* npm v5.0.0+
+- node v8.10.0+
+- npm v5.0.0+
 
 ### Run
 

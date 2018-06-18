@@ -1,0 +1,46 @@
+/* basic styling */
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
+}
+
+#pass.valid {
+  border-left: 10px solid #42a948;
+  /* green */
+}
+
+#pass.invalid {
+  border-left: 10px solid #a94442;
+  /* red */
+}
+
+#successMessage {
+  margin-left: 50px;
+}
+
+#failureMessage {
+  margin-left: 50px;
+}

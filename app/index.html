@@ -1,26 +1,66 @@
- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>pwned</title>
-    <script>
-      (()=> {
-        async function fetchPws() {
-          const response = await fetch("http://localhost:3000/passwords");
-          const passwords = await response.text();
-          // TODO: parse and store passwords.
-        };
-        fetchPws();
-      })();
-    </script>
-  </head>
-  <body>
-    <h1>NIST Password Validator</h1>
-    <div>
-      Password:
-      <input type="password" autocomplete="off" required>
-      <input type="submit" value="Check">
-    </div>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <title>pwned</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>NIST Password Validator</h1>
+        Password:
+        <input type="password" autocomplete="off" required id="pass" autofocus minlength="8" maxlength="64">
+        <input class="btn btn-info" type="submit" value="Check" onclick="checkPass()">
+        <br>
+      </div>
+      <!---/column1 -->
+
+      <div class="column">
+        <div style="margin-left: 25px">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">Digital Identity Guidelines</li>
+            <li class="list-group-item">Minimum of 8 characters</li>
+            <li class="list-group-item">Maximum of 64 characters</li>
+            <li class="list-group-item">All ASCII characters are valid</li>
+            <li class="list-group-item">Common passwords are invalid</li>
+          </ul>
+        </div>
+      </div>
+      <!---/column2 -->
+    </div>
+    <!---/row1 -->
+    <div class="row" style="margin-top:25px">
+      <div class="column">
+        <section class="alert alert-danger" role="alert" id="failureMessage" hidden>
+          <div class="alert-heading">
+            <h4>Oh no!</h4>
+          </div>
+          <div class="message-body">
+            <p>Your password failed. Try a more unique password.</p>
+          </div>
+        </section>
+      </div>
+      <div class="column">
+        <section class="alert alert-success" role="alert" id="successMessage" hidden>
+          <div class="alert-heading">
+            <h5>Great work!</h5>
+          </div>
+          <div class="message-body">
+            <p>It looks like that password passes the Digital Identity Guidlines.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!---/row2 -->
+  </div>
+  <!---/container -->
+  <script src="index.js"></script>
+</body>
+
+</html>
