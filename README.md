@@ -14,9 +14,9 @@ Clone the github url and start the server with `node server.js`. Navigate to loc
 
 - Compress password list to UTF-16 using bloom filter and LZString for caching in localStorage
 
-![success Message](https://github.com/essenceofchaos/nist-web-boilerplate/successMessage.png 'Screenshot of success message')
+![success Message](https://github.com/EssenceOfChaos/nist-web-boilerplate/successMessage.png)
 
-![failure Message](https://github.com/essenceofchaos/nist-web-boilerplate/failureMessage.png 'Screenshot of failure message')
+![failure Message](https://github.com/EssenceOfChaos/nist-web-boilerplate/failureMessage.png)
 
 # Background
 
