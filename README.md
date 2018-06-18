@@ -16,7 +16,11 @@ Clone the github url and start the server with `node server.js`. Navigate to loc
 
 ![success Message](https://i.imgur.com/ZDzcoMV.png)
 
+---
+
 ![failure Message](https://i.imgur.com/rqp7BXA.png)
+
+---
 
 # Background
 
